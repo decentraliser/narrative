@@ -1,0 +1,15 @@
+kind: Service
+apiVersion: v1
+metadata:
+  labels:
+    app: narrative-core
+  name: narrative-core
+  namespace: recovery
+spec:
+  ports:
+  - name: nc
+    port: 8080
+    targetPort: 8080
+  selector:
+    app: narrative-core
+

@@ -1,0 +1,24 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: narrative-core-webhooks
+  namespace: recovery
+  annotations:
+    nginx.ingress.kubernetes.io/ssl-redirect: "true"
+    nginx.ingress.kubernetes.io/limit-connections: "30"
+    nginx.ingress.kubernetes.io/limit-rate: "262144"
+    nginx.ingress.kubernetes.io/limit-rps: "15"
+    nginx.ingress.kubernetes.io/proxy-body-size: 100m
+spec:
+  rules:
+  - host: recovery.narrative.org
+    http:
+      paths:
+      - backend:
+          serviceName: narrative-core
+          servicePort: 8080
+        path: /webhooks/
+  tls:
+  - secretName: cloudflare-wildcard-narrative-org
+    hosts:
+      - recovery.narrative.org
