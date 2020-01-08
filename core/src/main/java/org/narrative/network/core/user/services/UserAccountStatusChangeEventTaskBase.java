@@ -64,9 +64,7 @@ public abstract class UserAccountStatusChangeEventTaskBase extends AreaTaskImpl<
         return originalEmail;
     }
 
-    public String getOriginalName() { return originalName; }
-
-    public boolean isDeletedAccountContents() {
-        return deletedAccountContents;
+    public String getOriginalName() {
+        return originalName;
     }
 }
