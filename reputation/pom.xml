@@ -7,13 +7,13 @@
     <packaging>jar</packaging>
 
     <name>Narrative Reputation</name>
-    <version>0.1.44</version>
+    <version>0.1.45</version>
     <description>Narrative Reputation module</description>
 
     <parent>
         <groupId>org.narrative</groupId>
         <artifactId>narrative-platform</artifactId>
-        <version>1.5.2</version>
+        <version>1.5.3</version>
     </parent>
 
     <properties>

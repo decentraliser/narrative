@@ -13,7 +13,7 @@
     <parent>
         <groupId>org.narrative</groupId>
         <artifactId>narrative-platform</artifactId>
-        <version>1.5.2</version>
+        <version>1.5.3</version>
     </parent>
 
     <properties>

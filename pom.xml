@@ -7,7 +7,7 @@
     <groupId>org.narrative</groupId>
     <artifactId>narrative-platform</artifactId>
     <packaging>pom</packaging>
-    <version>1.5.2</version>
+    <version>1.5.3</version>
 
     <name>Narrative Platform</name>
     <description>Narrative Platform parent pom</description>

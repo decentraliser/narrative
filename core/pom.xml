@@ -8,13 +8,13 @@
     <packaging>war</packaging>
 
     <name>Narrative Core</name>
-    <version>1.5.2</version>
+    <version>1.5.3</version>
     <description>Narrative Core module</description>
 
     <parent>
         <groupId>org.narrative</groupId>
         <artifactId>narrative-platform</artifactId>
-        <version>1.5.2</version>
+        <version>1.5.3</version>
     </parent>
 
     <repositories>
