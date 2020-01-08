@@ -12,7 +12,6 @@ import org.narrative.network.core.search.services.IndexHandlerJobBase;
 import org.narrative.network.core.search.services.IndexOperationJob;
 import org.narrative.network.core.search.services.OptimizeIndexes;
 import org.narrative.network.core.user.services.CleanupExpiredPendingEmailAddressesJob;
-import org.narrative.network.core.user.services.DeleteUserAccountContentJob;
 import org.narrative.network.customizations.narrative.niches.nicheauction.services.ProcessAuctionBeginningPaymentPeriodJob;
 import org.narrative.network.customizations.narrative.niches.nicheauction.services.ProcessExpiredInvoicesJob;
 import org.narrative.network.customizations.narrative.niches.services.ReleaseRejectedNicheNamesJob;
@@ -144,8 +143,6 @@ public class InstallSystemCronJobs extends GlobalTaskImpl<Object> {
     }
 
     private void durableJobs() {
-        addDurableJobIfNecessary(DeleteUserAccountContentJob.class);
-
         addDurableJobIfNecessary(ProcessAuctionBeginningPaymentPeriodJob.class);
 
         addDurableJobIfNecessary(IndexOperationJob.class);

@@ -136,7 +136,7 @@ public abstract class NetworkDAOImpl<T extends DAOObject, ID extends Serializabl
             }
             // bl: this wasn't working right for uninitialized proxies.  if the object is an uninitialized proxy,
             // then refresh doesn't actually do anything and will not obtain a LockMode of UPGRADE (LockMode will stay
-            // at NONE).  thus, in the case of an uninitalized proxy, do a load to ensure that the object has been
+            // at NONE).  thus, in the case of an uninitialized proxy, do a load to ensure that the object has been
             // loaded from the database.
             if (HibernateUtil.isObjectInitialized(obj)) {
                 // todo: if we're doing a refresh, we ought to check to see if the object is dirty.  if it is dirty,

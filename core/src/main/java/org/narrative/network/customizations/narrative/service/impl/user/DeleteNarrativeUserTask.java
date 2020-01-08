@@ -42,7 +42,7 @@ public class DeleteNarrativeUserTask extends UpdateProfileAccountConfirmationBas
         getAreaContext().doAreaTask(new DeleteUserTask(getUser().getOid()));
 
         // bl: delete all of the user's content synchronously, too.
-        getNetworkContext().doGlobalTask(new DeleteUserAccountContentTask(getUser(), false, originalName, null));
+        getNetworkContext().doGlobalTask(new DeleteUserAccountContentTask(getUser(), originalName));
 
         // jw: send an email to the user so they have a record of this change. Important if someone else got access to their account and did this for them.
         getAreaContext().doAreaTask(new SendUserDeletedOrActivationStatusChangeEmailTask(getUser(), originalName, originalEmail, true));
